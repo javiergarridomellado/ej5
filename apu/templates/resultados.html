@@ -1,0 +1,12 @@
+<p>Estas buscando a: <strong>{{ query }}</strong></p> 
+ 
+{% if personas %} 
+    <p>Personas encontradas: {{ personas|length }} personas{{ personas|pluralize }}.</p> 
+    <ul> 
+        {% for persona in personas %} 
+            <li>{{ persona.nombre }}</li> 
+        {% endfor %} 
+    </ul> 
+{% else %} 
+    <p>Ninguna persona coincide con el criterio de búsqueda.</p> 
+{% endif %} 

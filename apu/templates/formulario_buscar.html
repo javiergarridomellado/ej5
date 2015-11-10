@@ -1,0 +1,19 @@
+<html> 
+<head> 
+    <title>Buscar</title> 
+</head> 
+<body>
+{% if error %} 
+        <p style="color: red;">Por favor introduce un término de búsqueda.</p> 
+{% endif %}  
+    <form action="" method="get">
+		DNI: 
+        <input type="text" name="dni">
+		<br>
+		Nombre: 
+		<input type="text" name="nombre"> 
+		<br>
+        <input type="submit" value="Buscar"> 
+    </form> 
+</body> 
+</html> 
