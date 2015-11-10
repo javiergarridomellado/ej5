@@ -1,1 +1,1 @@
-web:  gunicorn apuestas.wsgi --log-file -
+web:  cd apuestas && gunicorn apuestas.wsgi --log-file -
