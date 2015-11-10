@@ -1,8 +1,10 @@
-Django==1.8.5
-Markdown==2.6.3
-apuestas==0.1
+Django==1.8.6
 argparse==1.2.1
-django-filter==0.11.0
-djangorestframework==3.3.0
-wheel==0.26.0
+dj-database-url==0.3.0
+dj-static==0.0.6
+django-toolbelt==0.0.1
+djangorestframework==3.3.1
+gunicorn==19.3.0
+psycopg2==2.6.1
+static3==0.6.1
 wsgiref==0.1.2
