@@ -1,1 +1,1 @@
-web:  cd apuestas && python manage.py runserver 0.0.0.0:$PORT --noreload
+web:  gunicorn apuestas.wsgi --log-file -
