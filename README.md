@@ -1,4 +1,4 @@
-![foreman](http://i1045.photobucket.com/albums/b457/Francisco_Javier_G_M/foreman_zpsf7k5np1z.png)
+[![Build Status](https://snap-ci.com/javiergarridomellado/ej5/branch/master/build_image)](https://snap-ci.com/javiergarridomellado/ej5/branch/master)
 [![Build Status](https://travis-ci.org/javiergarridomellado/ej5.svg?branch=master)](https://travis-ci.org/javiergarridomellado/ej5)
 
 ##Ejercicios del Tema 3
