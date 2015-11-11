@@ -20,7 +20,7 @@ class PersonaMethodTests(TestCase):
 		self.assertEqual(per.fondo,'500')
 		print("Testeo correcto.")
 
-
+#clase para el testeo de rutas
 class RutasTests(APITestCase):
 
 	def test_detalle_persona(self):
