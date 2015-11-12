@@ -15,9 +15,11 @@ import os
 
 import dj_database_url
 
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.8/howto/deployment/checklist/
@@ -95,6 +97,7 @@ DATABASES = {
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
+
 ON_HEROKU = os.environ.get('PORT')
 if ON_HEROKU:
 	DATABASE_URL='postgres://jxryjglugskiss:iKqJ7bn20j41Fcaa6kvGiSSK1v@ec2-107-21-222-62.compute-1.amazonaws.com:5432/dhbuh37t7p0dm'
