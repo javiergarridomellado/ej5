@@ -18,6 +18,7 @@ from django.contrib import admin
 
 urlpatterns = [
 	url(r'^', include('apu.urls', namespace="apu")),
+	url(r'^/', include('apu.urls', namespace="apu")),
     url(r'^admin/', include(admin.site.urls)),
 
 #EMPRESAS
