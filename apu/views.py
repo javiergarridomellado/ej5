@@ -132,7 +132,7 @@ def Persona_detalle(request, pk):
 	"""
 	try:
 		persona = Persona.objects.get(pk=pk)
-	except Empresa.DoesNotExist:
+	except Persona.DoesNotExist:
 		return HttpResponse(status=404)
 
 	if request.method == 'GET':
