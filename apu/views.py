@@ -143,7 +143,7 @@ def Persona_detalle(request, pk):
 		serializador = PersonaSerializer(persona, data=data)
 		if serializador.is_valid():
 			serializador.save()
-			return JSONResponse(serializador.data)
+			return JSONResponse(serializador.data,status=202)
 		return JSONResponse(serializador.errors, status=400)
 	elif request.method == 'DELETE':
 		persona.delete()
