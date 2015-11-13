@@ -3,6 +3,7 @@ from apu.models import Persona
 
 
 class PersonaSerializer(serializers.Serializer):
+	#pk=serializers.IntegerField(read_only=True)
 	nombre = serializers.CharField(max_length=50)
 	dni = serializers.CharField(max_length=9)
 	pais = serializers.CharField(max_length=20)
