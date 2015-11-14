@@ -13,14 +13,17 @@ https://docs.djangoproject.com/en/1.8/ref/settings/
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
 
-import dj_database_url
+#import dj_database_url
 
-SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+#SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
+ALLOWED_HOSTS = [‘hidden-meadow-4203.herokuapp.com’]
+import dj_database_url
+import dj_database_url
 
-
+DATABASES[‘default’] = dj_database_url.config()
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.8/howto/deployment/checklist/
 
@@ -30,7 +33,7 @@ SECRET_KEY = '2rrx#9oc7(-agc56zea(nrb-2dmcdv0$7=e5qr%t%x8%&=sdt)'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+#ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -90,20 +93,18 @@ WSGI_APPLICATION = 'apuestas.wsgi.application'
 
 
 # Database
-# https://docs.djangoproject.com/en/1.8/ref/settings/#databases
+# https://docs.djangoproject.com/en/1.8/ref/settings/#databases'
+#DATABASES = {
+#    'default': {
+#        'ENGINE': 'django.db.backends.sqlite3',
+#        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+#    }
+#}
+#ON_HEROKU = os.environ.get('PORT')
+#if ON_HEROKU:
+#	DATABASE_URL='postgres://jxryjglugskiss:iKqJ7bn20j41Fcaa6kvGiSSK1v@ec2-107-21-222-62.compute-1.amazonaws.com:5432/dhbuh37t7p0dm'
+#	DATABASES = {'default': dj_database_url.config(default=DATABASE_URL)}
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
-}
-ON_HEROKU = os.environ.get('PORT')
-if ON_HEROKU:
-	DATABASE_URL='postgres://jxryjglugskiss:iKqJ7bn20j41Fcaa6kvGiSSK1v@ec2-107-21-222-62.compute-1.amazonaws.com:5432/dhbuh37t7p0dm'
-	DATABASES = {'default': dj_database_url.config(default=DATABASE_URL)}
-#import dj_database_url
-#DATABASES['default'] =  dj_database_url.config()
 # Internationalization
 # Internationalization
 # https://docs.djangoproject.com/en/1.8/topics/i18n/
@@ -129,3 +130,4 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 )
+SECURE_PROXY_SSL_HEADER = (‘HTTP_X_FORWARDED_PROTO’, ‘https’)
