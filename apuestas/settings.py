@@ -19,13 +19,13 @@ import os
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-ALLOWED_HOSTS = ['hidden-meadow-4203.herokuapp.com']
+#ALLOWED_HOSTS = ['hidden-meadow-4203.herokuapp.com']
 import dj_database_url
 #import dj_database_url
 
-DATABASE_URL='postgres://jxryjglugskiss:iKqJ7bn20j41Fcaa6kvGiSSK1v@ec2-107-21-222-62.compute-1.amazonaws.com:5432/dhbuh37t7p0dm'
+#DATABASE_URL='postgres://jxryjglugskiss:iKqJ7bn20j41Fcaa6kvGiSSK1v@ec2-107-21-222-62.compute-1.amazonaws.com:5432/dhbuh37t7p0dm'
 
-DATABASES = {'default': dj_database_url.config(default=DATABASE_URL)}
+#DATABASES = {'default': dj_database_url.config(default=DATABASE_URL)}
 
 #DATABASES['default'] = dj_database_url.config()
 # Quick-start development settings - unsuitable for production
@@ -37,7 +37,7 @@ SECRET_KEY = '2rrx#9oc7(-agc56zea(nrb-2dmcdv0$7=e5qr%t%x8%&=sdt)'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-#ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -104,10 +104,10 @@ WSGI_APPLICATION = 'apuestas.wsgi.application'
 #        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
 #    }
 #}
-#ON_HEROKU = os.environ.get('PORT')
-#if ON_HEROKU:
-#	DATABASE_URL='postgres://jxryjglugskiss:iKqJ7bn20j41Fcaa6kvGiSSK1v@ec2-107-21-222-62.compute-1.amazonaws.com:5432/dhbuh37t7p0dm'
-#	DATABASES = {'default': dj_database_url.config(default=DATABASE_URL)}
+ON_HEROKU = os.environ.get('PORT')
+if ON_HEROKU:
+	DATABASE_URL='postgres://jxryjglugskiss:iKqJ7bn20j41Fcaa6kvGiSSK1v@ec2-107-21-222-62.compute-1.amazonaws.com:5432/dhbuh37t7p0dm'
+	DATABASES = {'default': dj_database_url.config(default=DATABASE_URL)}
 
 # Internationalization
 # Internationalization
