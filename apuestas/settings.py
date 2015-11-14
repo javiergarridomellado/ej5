@@ -19,7 +19,7 @@ import os
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-ALLOWED_HOSTS = [‘hidden-meadow-4203.herokuapp.com’]
+ALLOWED_HOSTS = ['hidden-meadow-4203.herokuapp.com']
 import dj_database_url
 import dj_database_url
 DATABASE_URL='postgres://jxryjglugskiss:iKqJ7bn20j41Fcaa6kvGiSSK1v@ec2-107-21-222-62.compute-1.amazonaws.com:5432/dhbuh37t7p0dm'
