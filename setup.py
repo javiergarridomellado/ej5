@@ -9,4 +9,5 @@ setup(name='apuestas',
 	license='GNU GPL',
 	packages=['apuestas'],
 	install_requires=['django','wheel'],
+	#include_package_data=True,
 	zip_safe=False)
