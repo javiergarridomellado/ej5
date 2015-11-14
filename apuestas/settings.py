@@ -22,8 +22,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 ALLOWED_HOSTS = [‘hidden-meadow-4203.herokuapp.com’]
 import dj_database_url
 import dj_database_url
-
-DATABASES[‘default’] = dj_database_url.config()
+DATABASE_URL='postgres://jxryjglugskiss:iKqJ7bn20j41Fcaa6kvGiSSK1v@ec2-107-21-222-62.compute-1.amazonaws.com:5432/dhbuh37t7p0dm'
+	DATABASES = {'default': dj_database_url.config(default=DATABASE_URL)}
+#DATABASES[‘default’] = dj_database_url.config()
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.8/howto/deployment/checklist/
 
