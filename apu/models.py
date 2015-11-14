@@ -18,7 +18,7 @@ class Persona(models.Model):
 	equipo = models.CharField(max_length=10)
 	hobbies = models.TextField(max_length=200)
 	#password = models.PasswordField(max_length=15)
-	fondo = models.IntegerField()
+	fondo = models.IntegerField(default=0)
 
 	def __unicode__(self):
 		return self.nombre
