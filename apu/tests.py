@@ -3,6 +3,7 @@ from rest_framework import status
 from rest_framework.test import APITestCase
 from apu.views import *
 from apu.models import Persona
+from django.test.client import RequestFactory
 # Create your tests here.Anadido testeo rutas
 
 
@@ -58,12 +59,13 @@ class RutasTests(APITestCase):
 		"""
 		per = Persona(nombre='Jose' ,dni='45678921r',pais='Holanda',equipo='Betis',hobbies='musica',fondo='500')
 		per.save()
-		data={'nombre':'nombre_update','dni':'dni_update','pais':'pais1','equipo':'equipo1','hobbies':'hobbies1','fondo':500}
+		data={"nombre":"nombre_update","dni":"dni1","pais":"pais1","equipo":"equipo1","hobbies":"hobbies1","fondo":500}
+		#data={'nombre':'nombre_update','dni':'dni_update','pais':'pais1','equipo':'equipo1','hobbies':'hobbies1','fondo':500}
+		response=self.client.post('/apu/1/',data, format='json')
 		#response=self.client.post('/apu/1/',data, format='json')
-		#response=self.client.post('/apu/1/',data, format='json')
-		#self.assertEqual(Persona.objects.get().nombre, 'nombre_update')
+		self.assertEqual(Persona.objects.get().nombre, 'nombre_update')
 		#self.assertEqual(Persona.objects.get().dni, 'dni_update')
-		#self.assertEqual(response.status_code, 202)
+		self.assertEqual(response.status_code, 202)
         print("REST: Persona actualizada correctamente")
 
 	def test_borra_persona(self):

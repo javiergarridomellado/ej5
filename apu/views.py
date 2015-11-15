@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render,get_object_or_404
 from django.http import HttpResponse, HttpResponseRedirect 
 from apu.models import Persona
 from django.views.generic import CreateView, TemplateView, ListView
@@ -138,7 +138,8 @@ def Persona_detalle(request, pk):
 	if request.method == 'GET':
 		serializador = PersonaSerializer(persona)
 		return JSONResponse(serializador.data)
-	elif request.method == 'PUT':
+	#elif request.method == 'PUT':
+	elif request.method == 'POST':
 		data = JSONParser().parse(request)
 		serializador = PersonaSerializer(persona, data=data)
 		if serializador.is_valid():
